@@ -35,11 +35,11 @@ const char PASSWORD[] ="1234";
 
 char Grade(float gpa)
 {
-    if (gpa==5.0) return 'A+';
-    else if (gpa>=4.0) return 'A';
+    if (gpa==4.0) return 'A';
     else if (gpa>=3.5) return 'B';
     else if (gpa>=3.0) return 'C';
-    else if(gpa>=2.5) return 'D';
+    else if (gpa>=2.5) return 'D';
+    else if(gpa>=2.0) return 'E';
     else return 'F';
 }
 
@@ -139,8 +139,8 @@ void display_students() {
     } else {
         printf("......\nHERE IS A LIST OF STUDENTS......\n");
         for (int i = 0; i < count; i++) {
-            printf("\nRank :%d\nRoll : %d\nName : %s %s\nGrade : %s\nClass : %s\n",
-                   students[i].rank,students[i].roll,students[i].first_name,students[i].last_name, students[i].grade, students[i].class);
+            printf("\nRoll : %d\nName : %s %s\nGrade : %s\nClass : %s\n",
+                   students[i].roll,students[i].first_name,students[i].last_name, students[i].grade, students[i].class);
         }
     }
 }
